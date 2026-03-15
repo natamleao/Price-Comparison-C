@@ -1,4 +1,4 @@
-APPS = ./apps
+APPS = ./app
 BIN = ./bin
 INCLUDE = ./include
 OBJ = ./obj
@@ -10,7 +10,8 @@ all: \
 	myapps
 
 libeb: \
-    $(OBJ)/eggs.o
+    $(OBJ)/egg.o \
+	$(OBJ)/list.o
 
 myapps: \
 	cleanapp \
