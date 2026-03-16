@@ -89,9 +89,9 @@ Cada nó da lista contém:
 
 ```
 struct _egg{
-    int identifier;
-    float price;
-    Egg *next;
+    int _identifier;
+    float _price;
+    _egg *_next;
 }
 ```
 
