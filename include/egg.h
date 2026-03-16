@@ -6,7 +6,7 @@
 typedef struct _egg Egg;
 
 /**
- * @brief Cria os ovos de páscoa, e pede pra pra alocar na lista
+ * @brief Cria os ovos de páscoa, e pede pra alocar na lista
  * 
  * @param identifier Identificador do ovo de páscoa
  * @param price Preco do ovo de páscoa
