@@ -82,10 +82,10 @@ int main(){
 
                     switch(updateOption){
                         case 1:
-                            printf("+--------------------------------------------------------------------------+\n");
-                            printf("+ INFORME O NOVO IDENTIFICADOR: ");
-                            scanf("%d", &newIdentifier);
                             if(f == 1){
+                                printf("+--------------------------------------------------------------------------+\n");
+                                printf("+ INFORME O NOVO IDENTIFICADOR: ");
+                                scanf("%d", &newIdentifier);
                                 ListUpdateItemIdentifier(egg, newIdentifier);
                                 printf("+--------------------------------------------------------------------------+\n");
                                 printf("+ IDENTIFICADOR ATUALIZADO ------------------------------------------------+\n");
@@ -101,10 +101,10 @@ int main(){
                             break;
                         
                         case 2:
-                            printf("+--------------------------------------------------------------------------+\n");
-                            printf("+ INFORME O NOVO PREÇO: ");
-                            scanf("%f", &newPrice);
                             if(f == 1){
+                                printf("+--------------------------------------------------------------------------+\n");
+                                printf("+ INFORME O NOVO PREÇO: ");
+                                scanf("%f", &newPrice);
                                 ListUpdateItemPrice(egg, newPrice);
                                 printf("+--------------------------------------------------------------------------+\n");
                                 printf("+ PREÇO ATUALIZADO --------------------------------------------------------+\n");
@@ -119,10 +119,10 @@ int main(){
                             break;
 
                         case 3:
-                            printf("+--------------------------------------------------------------------------+\n");
-                            printf("+ INFORME O NOVO IDENTIFICADOR SEGUIDO DO NOVO PREÇO: ");
-                            scanf("%d%f", &newIdentifier, &newPrice);
                             if(f == 1){
+                                printf("+--------------------------------------------------------------------------+\n");
+                                printf("+ INFORME O NOVO IDENTIFICADOR SEGUIDO DO NOVO PREÇO: ");
+                                scanf("%d%f", &newIdentifier, &newPrice);
                                 ListUpdateItem(egg, newIdentifier, newPrice);
                                 printf("+--------------------------------------------------------------------------+\n");
                                 printf("+ IDENTIFICADOR E PREÇO ATUALIZADOS ---------------------------------------+\n");
