@@ -239,5 +239,7 @@ int main(){
         }
     }
 
+    ListDestroy(&listEggs);
+
     return 0;
 }
