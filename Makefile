@@ -1,4 +1,4 @@
-APPS = ./app
+APP = ./app
 BIN = ./bin
 INCLUDE = ./include
 OBJ = ./obj
@@ -20,7 +20,7 @@ myapps: \
 $(OBJ)/%.o: $(SRC)/%.c $(INCLUDE)/%.h
 	gcc $(FLAGS) -c $< -I $(INCLUDE) -o $@
 
-$(BIN)/%: $(APPS)/%.c
+$(BIN)/%: $(APP)/%.c
 	gcc $(FLAGS) $< $(OBJ)/*.o -I $(INCLUDE) -o $@
 
 run:
