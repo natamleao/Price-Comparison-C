@@ -152,7 +152,7 @@ Price-Variation-C/
 Clone o repositório:
 
 ```bash
-git clone git@github.com:natamleao/Price-Variation-C.git
+git clone git@github.com:natamleao/Price-Comparison-C.git
 cd Price-Comparison-C
 ```
 
