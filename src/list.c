@@ -10,8 +10,6 @@ struct _list{
     Egg *_begin;
 };
 
-bool ListIsEmpty(List *list){return ListGetSize(list) == 0;}
-
 void ListIncrementSize(List *list){list->_size++;}
 void ListDecrementSize(List *list){list->_size--;}
 
@@ -19,12 +17,15 @@ void ListDecrementSize(List *list){list->_size--;}
 
 List *ListCreate(){
     List *listAlloc = (List*)malloc(sizeof(List));
+
     if(!listAlloc){
         perror("malloc");
         exit(EXIT_FAILURE);
     }
+
     ListSetSize(listAlloc, 0);
     ListSetBegin(listAlloc, NULL);
+
     return listAlloc;
 }
 
@@ -42,13 +43,16 @@ void ListSetBegin(List *list, Egg *begin){
 
 Egg *ListSearchItem(List *list, int identifier, int *f){
     Egg *aux = ListGetBegin(list);
+
     while(aux != NULL){
         if(EggGetIidentifier(aux) == identifier){
             (*f) = 1;
+
             return aux;
         }
-        EggSetNext(aux, EggGetNext(aux));
+        aux = EggGetNext(aux);
     }
+
     return NULL;
 }
 
@@ -83,14 +87,12 @@ void ListRemoveItem(List *list, int identifier, int *f){
 
     if(!actual){
         (*f) = 0;
+        
         return;
     }
 
-    if(previous == NULL)
-        ListSetBegin(list, EggGetNext(actual));
-    
-    else
-        EggSetNext(previous, EggGetNext(actual));
+    if(previous == NULL) ListSetBegin(list, EggGetNext(actual));
+    else EggSetNext(previous, EggGetNext(actual));
 
     (*f) = 1;
 
@@ -100,10 +102,13 @@ void ListRemoveItem(List *list, int identifier, int *f){
 
 void ListDestroy(List **list){
     Egg *previous = NULL, *actual = ListGetBegin(*list);
+
     while(actual != NULL){
-        previous = actual, actual = EggGetNext(actual);
+        previous = actual;
+        actual = EggGetNext(actual);
         free(previous);
     }
+
     free(*list);
     *list = NULL;
 }
@@ -111,6 +116,7 @@ void ListDestroy(List **list){
 void ListPrint(List *list){
     int count = 1;
     Egg *aux = ListGetBegin(list);
+
     while(aux != NULL){
         printf("+ ITEM %d - IDENTIFICADOR: %d | PREÇO: %.2f\n", count, EggGetIidentifier(aux), EggGetPrice(aux));
         printf("+--------------------------------------------------------------------------+\n");
@@ -122,24 +128,31 @@ void ListPrint(List *list){
 float ListEggsAveragePrice(List *list){
     float sumEggPrices = 0.0;
     Egg *aux = ListGetBegin(list);
+
     while(aux != NULL){
         sumEggPrices += EggGetPrice(aux);
         aux = EggGetNext(aux);
     }
+
     return (sumEggPrices / ListGetSize(list));
 }
 
 void ListEggsSearchPrice(List *list){
     float priceHedging = ListEggsAveragePrice(list);
     Egg *aux = ListGetBegin(list);
+
     while(aux != NULL){
         if(EggGetPrice(aux) < (priceHedging / 2))
             printf("+ OVO DE PÁSCOA %d: TALVEZ DÊ PARA COMPRAR\n", EggGetIidentifier(aux));
+
         else if(EggGetPrice(aux) <= priceHedging)
             printf("+ OVO DE PÁSCOA %d: ACHO QUE É MELHOR COMPRAR O VALOR EM BARRA DE CHOCOLATE\n", EggGetIidentifier(aux));
+
         else
             printf("+ OVO DE PÁSCOA %d: MELHOR COMPRAR UMA BARRA DE OURO COM ESSE DINEHIRO\n", EggGetIidentifier(aux));
+
         printf("+--------------------------------------------------------------------------+\n");
+
         aux = EggGetNext(aux);
     }
 }

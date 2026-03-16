@@ -14,13 +14,16 @@ struct _egg{
 
 Egg *EggCreate(int identifier, float price){
     Egg *eggsAlloc = (Egg*)malloc(sizeof(Egg));
+
     if(!eggsAlloc){
         perror("malloc");
         exit(EXIT_FAILURE);
     }
+
     EggSetIidentifier(eggsAlloc, identifier);
     EggSetPrice(eggsAlloc, price);
     EggSetNext(eggsAlloc, NULL);
+    
     return eggsAlloc;
 }
 

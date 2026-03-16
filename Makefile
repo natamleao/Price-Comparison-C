@@ -26,7 +26,6 @@ $(BIN)/%: $(APPS)/%.c
 run:
 	$(BIN)/app
 
-
 clean:
 	rm -rf $(BIN)/* $(OBJ)/*
 
