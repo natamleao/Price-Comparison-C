@@ -176,6 +176,7 @@ Remova os arquivos compilados:
 
 ```bash
 make clean
+make cleanapp
 ```
 
 ---
