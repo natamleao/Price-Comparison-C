@@ -1,13 +1,25 @@
-# Comparação de preços de ovos de Páscoa
+# 🥚 Price Comparison – Easter Eggs (C)
 
-![C](https://img.shields.io/badge/C-C11-blue)
-![Status](https://img.shields.io/badge/Project-Personal-orange)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![Language](https://img.shields.io/badge/language-C-blue)
+![Standard](https://img.shields.io/badge/standard-C11-orange)
+![Build](https://img.shields.io/badge/build-Makefile-green)
+![Data Structure](https://img.shields.io/badge/data_structure-linked_list-yellow)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-## Sobre o projeto
+---
 
-> [!NOTE]
-> Este projeto apresenta a implementação de uma **lista encadeada em C**, com o objetivo de auxiliar na comparação de preços entre diferentes ovos de Páscoa cadastrados na lista, permitindo ao usuário decidir se vale a pena realizar a compra.
+# Sobre o projeto
+
+Este projeto implementa um sistema simples para **comparação de preços de ovos de Páscoa**, utilizando uma **lista encadeada em C** como estrutura de dados principal.
+
+O programa permite registrar diferentes produtos informando:
+
+* identificador
+* preço
+
+Com base nos valores cadastrados, o sistema analisa os preços e informa **se vale a pena ou não realizar a compra**.
+
+O objetivo do projeto é praticar **estruturas de dados, manipulação de ponteiros e organização modular de código em C**.
 
 ---
 
@@ -21,7 +33,7 @@
 
 # Conceitos aplicados
 
-Este projeto utiliza diversos conceitos fundamentais de programação em C:
+Este projeto utiliza diversos conceitos fundamentais da linguagem C:
 
 * Alocação dinâmica de memória (`malloc`, `free`)
 * Manipulação de ponteiros
@@ -29,55 +41,56 @@ Este projeto utiliza diversos conceitos fundamentais de programação em C:
 * Encapsulamento utilizando arquivos `.h`
 * Modularização do código
 * Separação entre **interface e implementação**
-* Automação da compilação com `Makefile`
+* Organização do projeto em múltiplos diretórios
+* Automação da compilação com **Makefile**
 
 ---
 
 # Funcionalidades
 
-## 1. Adicionar ovo de Páscoa à lista
+## Adicionar ovos de Páscoa
 
-O usuário pode adicionar itens à lista informando:
-
-* identificador
-* preço
-
----
-
-## 2. Atualizar os dados de um ovo de Páscoa
-
-O usuário pode atualizar:
-
-* apenas o identificador
-* apenas o preço
-* identificador e preço simultaneamente
-
----
-
-## 3. Remover um ovo de Páscoa da lista
-
-O usuário pode remover um item da lista informando seu **identificador**.
-
----
-
-## 4. Mostrar os ovos de Páscoa cadastrados
-
-O sistema exibe todos os itens presentes na lista:
+Permite inserir novos itens na lista informando:
 
 * identificador
 * preço
 
 ---
 
-## 5. Verificar o resultado
+## Atualizar dados
 
-O sistema analisa os ovos de Páscoa cadastrados e informa se **vale a pena ou não realizar a compra**, com base nos preços informados.
+Permite atualizar os dados de um item já cadastrado:
+
+* atualizar apenas o identificador
+* atualizar apenas o preço
+* atualizar ambos
 
 ---
 
-# Representação da lista encadeada
+## Remover item
 
-A estrutura de dados utilizada pode ser representada da seguinte forma:
+Remove um ovo de Páscoa da lista através do **identificador**.
+
+---
+
+## Exibir lista
+
+Mostra todos os itens cadastrados contendo:
+
+* identificador
+* preço
+
+---
+
+## Verificar resultado
+
+Analisa os preços cadastrados e informa se **vale a pena ou não realizar a compra**, com base nos valores presentes na lista.
+
+---
+
+# Representação da estrutura de dados
+
+A lista encadeada pode ser representada da seguinte forma:
 
 ```
 HEAD
@@ -85,14 +98,14 @@ HEAD
 [ID:1 | 45.90] → [ID:2 | 39.50] → [ID:3 | 52.00] → NULL
 ```
 
-Cada nó da lista contém:
+Cada nó da lista possui a seguinte estrutura:
 
-```
+```c
 struct _egg{
     int _identifier;
     float _price;
-    _egg *_next;
-}
+    struct _egg *_next;
+};
 ```
 
 ---
@@ -100,16 +113,17 @@ struct _egg{
 # Estrutura do projeto
 
 ```
-Price-Variation-C/
+Price-Comparison-C/
 │
-├── app/       # arquivos principais da aplicação (main e interface)
-├── bin/       # executáveis gerados após a compilação
-├── include/   # arquivos de cabeçalho (.h)
-├── obj/       # arquivos objeto (.o)
-├── src/       # código-fonte da aplicação (.c)
+├── app/       # Arquivos principais da aplicação (main)
+├── bin/       # Executáveis gerados após a compilação
+├── include/   # Arquivos de cabeçalho (.h)
+├── obj/       # Arquivos objeto (.o)
+├── src/       # Código-fonte da aplicação (.c)
 │
-├── Makefile   # regras de compilação
-└── README.md  # documentação do projeto
+├── Makefile   # Regras de compilação
+├── README.md  # Documentação do projeto
+└── LICENSE    # Licença do projeto
 ```
 
 ---
@@ -134,16 +148,18 @@ Price-Variation-C/
 +--------------------------------------------------------------------------+
 + 0 - SAIR ----------------------------------------------------------------+
 +--------------------------------------------------------------------------+
-+ INFORME A OPÇÃO DESEJADA: 1
-+--------------------------------------------------------------------------+
-+---------------------------- ADICIONAR ITENS -----------------------------+
-+--------------------------------------------------------------------------+
-+ INFORME A QUANTIDADE DE OVOS: 2
-+--------------------------------------------------------------------------+
-+ INFORME O IDENTIFICADOR E O PREÇO DO 1º OVO: 1 45.90
-+--------------------------------------------------------------------------+
-+ INFORME O IDENTIFICADOR E O PREÇO DO 1º OVO: 2 39.50
++ INFORME A OPÇÃO DESEJADA: 
 ```
+
+---
+
+# Requisitos
+
+Para compilar o projeto é necessário:
+
+* **GCC ou Clang**
+* **GNU Make**
+* Sistema **Linux ou macOS**
 
 ---
 
@@ -158,21 +174,29 @@ cd Price-Comparison-C
 
 ---
 
-# Compilação e execução
+# Compilação
 
-Compile o projeto:
+Compile o projeto com:
 
 ```bash
 make
 ```
 
-Execute o programa:
+---
+
+# Execução
+
+Execute o programa com:
 
 ```bash
 make run
 ```
 
-Remova os arquivos compilados:
+---
+
+# Limpeza do projeto
+
+Remover arquivos compilados:
 
 ```bash
 make clean
@@ -181,10 +205,16 @@ make cleanapp
 
 ---
 
+# Licença
+
+Este projeto está licenciado sob a **MIT License**.
+
+---
+
 # Autor
 
 **Natam Leão Ferreira**
 
-Data de conclusão: **15/03/2026**
+Conclusão: **2026**
 
 ---
