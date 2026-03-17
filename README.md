@@ -10,7 +10,8 @@
 
 # Sobre o projeto
 
-Este projeto implementa um sistema simples para **comparação de preços de ovos de Páscoa**, utilizando uma **lista encadeada em C** como estrutura de dados principal.
+> [!NOTE]
+> Este projeto implementa um sistema simples para **comparação de preços de ovos de Páscoa**, utilizando uma **lista encadeada em C** como estrutura de dados principal.
 
 O programa permite registrar diferentes produtos informando:
 
@@ -23,11 +24,12 @@ O objetivo do projeto é praticar **estruturas de dados, manipulação de pontei
 
 ---
 
-# Tecnologias utilizadas
-
-* **C (padrão C11)**
-* **GNU Make** para automação da compilação
-* Estrutura de dados: **lista encadeada**
+> [!IMPORTANT]
+> # Tecnologias utilizadas
+>
+> * **C (padrão C11)**
+> * **GNU Make** para automação da compilação
+> * Estrutura de dados: **lista encadeada**
 
 ---
 
