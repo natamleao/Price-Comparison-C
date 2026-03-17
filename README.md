@@ -1,4 +1,4 @@
-# 🥚 Price Comparison – Easter Eggs (C)
+# Price Comparison – Easter Eggs (C)
 
 ![Language](https://img.shields.io/badge/language-C-blue)
 ![Standard](https://img.shields.io/badge/standard-C11-orange)
@@ -8,15 +8,15 @@
 
 ---
 
-# Sobre o projeto
+## Sobre o projeto
 
 > [!NOTE]
 > Este projeto implementa um sistema simples para **comparação de preços de ovos de Páscoa**, utilizando uma **lista encadeada em C** como estrutura de dados principal.
 
 O programa permite registrar diferentes produtos informando:
 
-* identificador
-* preço
+* Identificador;
+* Preço.
 
 Com base nos valores cadastrados, o sistema analisa os preços e informa **se vale a pena ou não realizar a compra**.
 
@@ -25,7 +25,7 @@ O objetivo do projeto é praticar **estruturas de dados, manipulação de pontei
 ---
 
 > [!IMPORTANT]
-> # Tecnologias utilizadas
+> ## Tecnologias utilizadas
 >
 > * **C (padrão C11)**
 > * **GNU Make** para automação da compilação
@@ -33,7 +33,7 @@ O objetivo do projeto é praticar **estruturas de dados, manipulação de pontei
 
 ---
 
-# Conceitos aplicados
+## Conceitos aplicados
 
 Este projeto utiliza diversos conceitos fundamentais da linguagem C:
 
@@ -48,9 +48,9 @@ Este projeto utiliza diversos conceitos fundamentais da linguagem C:
 
 ---
 
-# Funcionalidades
+## Funcionalidades
 
-## Adicionar ovos de Páscoa
+### Adicionar ovos de Páscoa
 
 Permite inserir novos itens na lista informando:
 
@@ -59,7 +59,7 @@ Permite inserir novos itens na lista informando:
 
 ---
 
-## Atualizar dados
+### Atualizar dados
 
 Permite atualizar os dados de um item já cadastrado:
 
@@ -69,13 +69,13 @@ Permite atualizar os dados de um item já cadastrado:
 
 ---
 
-## Remover item
+### Remover item
 
 Remove um ovo de Páscoa da lista através do **identificador**.
 
 ---
 
-## Exibir lista
+### Exibir lista
 
 Mostra todos os itens cadastrados contendo:
 
@@ -84,13 +84,13 @@ Mostra todos os itens cadastrados contendo:
 
 ---
 
-## Verificar resultado
+### Verificar resultado
 
 Analisa os preços cadastrados e informa se **vale a pena ou não realizar a compra**, com base nos valores presentes na lista.
 
 ---
 
-# Representação da estrutura de dados
+## Representação da estrutura de dados
 
 A lista encadeada pode ser representada da seguinte forma:
 
@@ -112,7 +112,7 @@ struct _egg{
 
 ---
 
-# Estrutura do projeto
+## Estrutura do projeto
 
 ```
 Price-Comparison-C/
@@ -130,7 +130,7 @@ Price-Comparison-C/
 
 ---
 
-# Exemplo de execução
+## Exemplo de execução
 
 ```
 +--------------------------------------------------------------------------+
@@ -155,7 +155,7 @@ Price-Comparison-C/
 
 ---
 
-# Requisitos
+## Requisitos
 
 Para compilar o projeto é necessário:
 
@@ -165,7 +165,7 @@ Para compilar o projeto é necessário:
 
 ---
 
-# Instalação
+## Instalação
 
 Clone o repositório:
 
@@ -176,7 +176,7 @@ cd Price-Comparison-C
 
 ---
 
-# Compilação
+## Compilação
 
 Compile o projeto com:
 
@@ -186,7 +186,7 @@ make
 
 ---
 
-# Execução
+## Execução
 
 Execute o programa com:
 
@@ -196,7 +196,7 @@ make run
 
 ---
 
-# Limpeza do projeto
+## Limpeza do projeto
 
 Remover arquivos compilados:
 
@@ -207,13 +207,13 @@ make cleanapp
 
 ---
 
-# Licença
+## Licença
 
 Este projeto está licenciado sob a **MIT License**.
 
 ---
 
-# Autor
+## Autor
 
 **Natam Leão Ferreira**
 
