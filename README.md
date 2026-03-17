@@ -147,13 +147,14 @@ Price-Comparison-C/
 
 ---
 
-## Requisitos
-
-Para compilar o projeto é necessário:
-
-* **GCC ou Clang**
-* **GNU Make**
-* Sistema **Linux ou macOS**
+> [!IMPORTANT]
+> ## Requisitos
+>
+> Para compilar o projeto é necessário:
+>
+> * **GCC ou Clang**
+> * **GNU Make**
+> * Sistema **Linux ou macOS**
 
 ---
 
@@ -199,9 +200,9 @@ make cleanapp
 
 ---
 
-## Licença
-
 > [!WARNING]
+> ## Licença
+> 
 > Este projeto está licenciado sob a **MIT License**.
 
 ---
