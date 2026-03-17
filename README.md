@@ -15,8 +15,8 @@
 
 O programa permite registrar diferentes produtos informando:
 
-* Identificador;
-* Preço.
+* identificador;
+* preço.
 
 Com base nos valores cadastrados, o sistema analisa os preços e informa **se vale a pena ou não realizar a compra**.
 
@@ -54,8 +54,8 @@ Este projeto utiliza diversos conceitos fundamentais da linguagem C:
 
 Permite inserir novos itens na lista informando:
 
-* identificador
-* preço
+* identificador;
+* preço.
 
 ---
 
@@ -63,9 +63,9 @@ Permite inserir novos itens na lista informando:
 
 Permite atualizar os dados de um item já cadastrado:
 
-* atualizar apenas o identificador
-* atualizar apenas o preço
-* atualizar ambos
+* atualizar apenas o identificador;
+* atualizar apenas o preço;
+* atualizar ambos.
 
 ---
 
@@ -79,8 +79,8 @@ Remove um ovo de Páscoa da lista através do **identificador**.
 
 Mostra todos os itens cadastrados contendo:
 
-* identificador
-* preço
+* identificador;
+* preço.
 
 ---
 
