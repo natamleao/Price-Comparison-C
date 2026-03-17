@@ -199,9 +199,9 @@ make cleanapp
 
 ---
 
+## Licença
+
 > [!WARNING]
-> ## Licença
->
 > Este projeto está licenciado sob a **MIT License**.
 
 ---
