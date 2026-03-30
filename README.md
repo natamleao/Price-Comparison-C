@@ -109,7 +109,7 @@ struct _egg{
 ```
 Price-Comparison-C/
 │
-├── app/       # Arquivos principais da aplicação (main)
+├── app/       # Arquivo principal da aplicação (main)
 ├── bin/       # Executáveis gerados após a compilação
 ├── include/   # Arquivos de cabeçalho (.h)
 ├── obj/       # Arquivos objeto (.o)
