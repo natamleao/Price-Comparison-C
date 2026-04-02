@@ -120,7 +120,7 @@ Price-Comparison-C/
 ├── app/       # Arquivo principal da aplicação (main)
 ├── bin/       # Executáveis gerados após a compilação
 ├── include/   # Arquivos de cabeçalho (.h)
-├── obj/       # Arquivos objeto (.o)
+├── build/     # Arquivos objeto (.o)
 ├── src/       # Código-fonte da aplicação (.c)
 │
 ├── Makefile   # Regras de compilação

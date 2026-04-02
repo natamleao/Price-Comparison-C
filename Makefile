@@ -1,7 +1,7 @@
 APP = ./app
 BIN = ./bin
 INCLUDE = ./include
-OBJ = ./obj
+BUILD = ./build
 SRC = ./src
 FLAGS = -Wall -Werror 
 
@@ -10,24 +10,24 @@ all: \
 	myapps
 
 libeb: \
-    $(OBJ)/egg.o \
-	$(OBJ)/list.o
+    $(BUILD)/egg.o \
+	$(BUILD)/list.o
 
 myapps: \
 	cleanapp \
 	$(BIN)/app
 
-$(OBJ)/%.o: $(SRC)/%.c $(INCLUDE)/%.h
+$(BUILD)/%.o: $(SRC)/%.c $(INCLUDE)/%.h
 	gcc $(FLAGS) -c $< -I $(INCLUDE) -o $@
 
 $(BIN)/%: $(APP)/%.c
-	gcc $(FLAGS) $< $(OBJ)/*.o -I $(INCLUDE) -o $@
+	gcc $(FLAGS) $< $(BUILD)/*.o -I $(INCLUDE) -o $@
 
 run:
 	$(BIN)/app
 
 clean:
-	rm -rf $(BIN)/* $(OBJ)/*
+	rm -rf $(BIN)/* $(BUILD)/*
 
 cleanapp:
 	rm -rf $(BIN)/*
