@@ -1,4 +1,4 @@
-# Price Comparison – Easter Eggs (C)
+# *Price Comparison – Easter Eggs* (em C)
 
 ![Language](https://img.shields.io/badge/language-C-blue)
 ![Standard](https://img.shields.io/badge/standard-C11-orange)
@@ -78,7 +78,15 @@ Mostra todos os itens cadastrados contendo:
 
 ### Verificar resultado
 
-Analisa os preços cadastrados e informa se **vale a pena ou não realizar a compra**, com base nos valores presentes na lista.
+Analisa os preços cadastrados e informa se **vale a pena ou não realizar a compra**, com base nos valores presentes na lista, respondendo:
+
+```
++ OVO DE PÁSCOA %d: TALVEZ DÊ PARA COMPRAR
++ OVO DE PÁSCOA %d: ACHO QUE É MELHOR COMPRAR O VALOR EM BARRA DE CHOCOLATE
++ OVO DE PÁSCOA %d: MELHOR COMPRAR UMA BARRA DE OURO COM ESSE DINEHIRO
+```
+
+Onde `%d` é o identificador do ovo.
 
 ---
 
